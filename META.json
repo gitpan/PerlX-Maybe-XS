@@ -4,9 +4,10 @@
       "Toby Inkster <tobyink@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.64, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.003, CPAN::Meta::Converter version 2.120921",
+   "keywords" : [],
    "license" : [
-      "unknown"
+      "perl"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -15,25 +16,58 @@
    "name" : "PerlX-Maybe-XS",
    "no_index" : {
       "directory" : [
+         "eg",
+         "examples",
+         "inc",
          "t",
-         "inc"
+         "xt"
       ]
    },
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "ExtUtils::MakeMaker" : "0"
-         }
-      },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "0"
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "develop" : {
+         "recommends" : {
+            "Dist::Inkt" : "0.001"
          }
       },
       "runtime" : {
-         "requires" : {}
+         "recommends" : {
+            "Perl::Maybe" : 0
+         },
+         "requires" : {
+            "perl" : "5.008"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.61"
+         }
       }
    },
-   "release_status" : "stable",
-   "version" : "0.005"
+   "provides" : {
+      "PerlX::Maybe::XS" : {
+         "file" : "lib/PerlX/Maybe/XS.pm",
+         "version" : "0.999_01"
+      }
+   },
+   "release_status" : "testing",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://rt.cpan.org/Dist/Display.html?Queue=PerlX-Maybe-XS"
+      },
+      "homepage" : "https://metacpan.org/release/PerlX-Maybe-XS",
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ],
+      "repository" : {
+         "type" : "git",
+         "web" : "https://github.com/tobyink/p5-perlx-maybe-xs"
+      }
+   },
+   "version" : "0.999_01",
+   "x_provides_scripts" : {}
 }

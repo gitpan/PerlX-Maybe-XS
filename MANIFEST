@@ -1,15 +1,21 @@
+CONTRIBUTING
+COPYRIGHT
+CREDITS
 Changes
-Makefile.PL
+LICENSE
 MANIFEST
-ppport.h
+META.json
+META.ttl
+META.yml
+Makefile.PL
 README
+SIGNATURE
 XS.xs
-fallback/const-xs.inc
+dist.ini
 fallback/const-c.inc
+fallback/const-xs.inc
 lib/PerlX/Maybe/XS.pm
+ppport.h
 t/01basic.t
 t/02maybe.t
 t/03provided.t
-
-META.yml                                 Module YAML meta-data (added by MakeMaker)
-META.json                                Module JSON meta-data (added by MakeMaker)

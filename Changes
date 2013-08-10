@@ -1,14 +1,23 @@
-Revision history for Perl extension PerlX::Maybe::XS.
+PerlX-Maybe-XS
+==============
 
-0.003	2013-03-13
+Created:      2013-03-13
+Home page:    <https://metacpan.org/release/PerlX-Maybe-XS>
+Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=PerlX-Maybe-XS>
+Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
- - initial release; feature compatible with PerlX::Maybe 0.003.
+0.999_01  2013-08-10
 
-0.004	2013-03-13
+ - (Packaging) Switch from plain ExtUtils::MakeMaker to Dist::Inkt.
 
- - (Bugfix) prototype for `provided` function.
+0.005  2013-03-13
 
-0.005	2013-04-09
+ - (Bugfix) Fix README.
 
- - (Packaging) Fix readme.
+0.004  2013-03-13
+
+ - (Bugfix) Prototype for `provided` function.
+
+0.003  2013-03-13  Initial release; feature compatible with PerlX::Maybe 0.003
+
 
