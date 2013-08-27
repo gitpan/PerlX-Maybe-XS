@@ -26,7 +26,7 @@
 	doap:maintainer      <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:name            "PerlX-Maybe-XS";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/v_0-003>, <http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/v_0-004>, <http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/v_0-005>, <http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/v_0-999_01>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/v_0-003>, <http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/v_0-004>, <http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/v_0-005>, <http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/v_0-999_01>, <http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/v_1-000>;
 	doap:repository      [
 		a doap:GitRepository;
 		doap:browse <https://github.com/tobyink/p5-perlx-maybe-xs>;
@@ -83,6 +83,15 @@
 	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/PerlX-Maybe-XS-0.999_01.tar.gz>;
 	doap:revision        "0.999_01"^^xsd:string.
+
+<http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/v_1-000>
+	a                    doap:Version;
+	dc:identifier        "PerlX-Maybe-XS-1.000"^^xsd:string;
+	dc:issued            "2013-08-27"^^xsd:date;
+	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
+	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/PerlX-Maybe-XS-1.000.tar.gz>;
+	doap:revision        "1.000"^^xsd:string;
+	rdfs:comment         "No functional changes.".
 
 <http://purl.org/NET/cpan-uri/person/tobyink>
 	a                    foaf:Person;

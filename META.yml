@@ -1,13 +1,13 @@
 ---
 abstract: 'XS backend for PerlX::Maybe'
 author:
-  - 'Toby Inkster <tobyink@cpan.org>'
+  - 'Toby Inkster (TOBYINK) <tobyink@cpan.org>'
 build_requires:
   Test::More: 0.61
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  ExtUtils::MakeMaker: 6.17
 dynamic_config: 1
-generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.003, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.007, CPAN::Meta::Converter version 2.120921'
 keywords: []
 license: unknown
 meta-spec:
@@ -24,15 +24,16 @@ no_index:
 provides:
   PerlX::Maybe::XS:
     file: lib/PerlX/Maybe/XS.pm
-    version: 0.999_01
+    version: 1.000
 recommends:
   Perl::Maybe: 0
 requires:
   perl: 5.008
 resources:
+  X_identifier: http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/project
   bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=PerlX-Maybe-XS
   homepage: https://metacpan.org/release/PerlX-Maybe-XS
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-perlx-maybe-xs
-version: 0.999_01
+version: 1.000
 x_provides_scripts: {}

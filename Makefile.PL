@@ -1,13 +1,13 @@
 use strict;
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.17;
 
 my $EUMM = 'ExtUtils::MakeMaker'->VERSION;
 
 my $meta = {
   "abstract"           => "XS backend for PerlX::Maybe",
-  "author"             => ["Toby Inkster <tobyink\@cpan.org>"],
+  "author"             => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>"],
   "dynamic_config"     => 1,
-  "generated_by"       => "Dist::Inkt::Profile::TOBYINK version 0.003, CPAN::Meta::Converter version 2.120921",
+  "generated_by"       => "Dist::Inkt::Profile::TOBYINK version 0.007, CPAN::Meta::Converter version 2.120921",
   "keywords"           => [],
   "license"            => ["perl_5"],
   "meta-spec"          => {
@@ -17,27 +17,28 @@ my $meta = {
   "name"               => "PerlX-Maybe-XS",
   "no_index"           => { directory => ["eg", "examples", "inc", "t", "xt"] },
   "prereqs"            => {
-                            configure => { requires => { "ExtUtils::MakeMaker" => 6.31 } },
+                            configure => { requires => { "ExtUtils::MakeMaker" => 6.17 } },
                             develop   => { recommends => { "Dist::Inkt" => 0.001 } },
                             runtime   => { recommends => { "Perl::Maybe" => 0 }, requires => { perl => 5.008 } },
                             test      => { requires => { "Test::More" => 0.61 } },
                           },
   "provides"           => {
-                            "PerlX::Maybe::XS" => { file => "lib/PerlX/Maybe/XS.pm", version => "0.999_01" },
+                            "PerlX::Maybe::XS" => { file => "lib/PerlX/Maybe/XS.pm", version => "1.000" },
                           },
-  "release_status"     => "testing",
+  "release_status"     => "stable",
   "resources"          => {
-                            bugtracker => {
-                                            web => "http://rt.cpan.org/Dist/Display.html?Queue=PerlX-Maybe-XS",
-                                          },
-                            homepage   => "https://metacpan.org/release/PerlX-Maybe-XS",
-                            license    => ["http://dev.perl.org/licenses/"],
-                            repository => {
-                                            type => "git",
-                                            web  => "https://github.com/tobyink/p5-perlx-maybe-xs",
-                                          },
+                            bugtracker   => {
+                                              web => "http://rt.cpan.org/Dist/Display.html?Queue=PerlX-Maybe-XS",
+                                            },
+                            homepage     => "https://metacpan.org/release/PerlX-Maybe-XS",
+                            license      => ["http://dev.perl.org/licenses/"],
+                            repository   => {
+                                              type => "git",
+                                              web  => "https://github.com/tobyink/p5-perlx-maybe-xs",
+                                            },
+                            X_identifier => "http://purl.org/NET/cpan-uri/dist/PerlX-Maybe-XS/project",
                           },
-  "version"            => "0.999_01",
+  "version"            => "1.000",
   "x_provides_scripts" => {},
 };
 
@@ -76,13 +77,13 @@ my %WriteMakefileArgs = (
 	ABSTRACT           => $meta->{abstract},
 	AUTHOR             => ($EUMM >= 6.5702 ? $meta->{author} : $meta->{author}[0]),
 	DISTNAME           => $meta->{name},
-	DISTVNAME          => sprintf('%s-%s', $meta->{name}, $meta->{version}),
-	EXE_FILES          => [ map $_->{file}, values %{ $meta->{x_provides_scripts} || {} } ],
-	LICENSE            => $meta->{license}[0],
-	NAME               => do { my $n = $meta->{name}; $n =~ s/-/::/g; $n },
 	VERSION            => $meta->{version},
+	EXE_FILES          => [ map $_->{file}, values %{ $meta->{x_provides_scripts} || {} } ],
+	NAME               => do { my $n = $meta->{name}; $n =~ s/-/::/g; $n },
 	%dynamic_config,
 );
+
+$WriteMakefileArgs{LICENSE} => $meta->{license}[0] if $EUMM >= 6.3001;
 
 sub deps
 {
@@ -108,14 +109,14 @@ if ($EUMM >= 6.6303)
 }
 elsif ($EUMM >= 6.5503)
 {
-	$WriteMakefileArgs{BUILD_REQUIRES}     ||= deps('build');
-	$WriteMakefileArgs{CONFIGURE_REQUIRES} ||= deps('configure', 'test');
+	$WriteMakefileArgs{BUILD_REQUIRES}     ||= deps('build', 'test');
+	$WriteMakefileArgs{CONFIGURE_REQUIRES} ||= deps('configure');
 	$WriteMakefileArgs{PREREQ_PM}          ||= deps('runtime');	
 }
 elsif ($EUMM >= 6.52)
 {
-	$WriteMakefileArgs{CONFIGURE_REQUIRES} ||= deps('configure', 'build', 'test');
-	$WriteMakefileArgs{PREREQ_PM}          ||= deps('runtime');	
+	$WriteMakefileArgs{CONFIGURE_REQUIRES} ||= deps('configure');
+	$WriteMakefileArgs{PREREQ_PM}          ||= deps('runtime', 'build', 'test');	
 }
 else
 {
