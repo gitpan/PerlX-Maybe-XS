@@ -4,10 +4,10 @@
       "Toby Inkster (TOBYINK) <tobyink@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.007, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.014, CPAN::Meta::Converter version 2.120921",
    "keywords" : [],
    "license" : [
-      "perl"
+      "perl_5"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -23,6 +23,7 @@
          "xt"
       ]
    },
+   "optional_features" : {},
    "prereqs" : {
       "configure" : {
          "requires" : {
@@ -36,7 +37,7 @@
       },
       "runtime" : {
          "recommends" : {
-            "Perl::Maybe" : 0
+            "PerlX::Maybe" : "0"
          },
          "requires" : {
             "perl" : "5.008"
@@ -51,7 +52,7 @@
    "provides" : {
       "PerlX::Maybe::XS" : {
          "file" : "lib/PerlX/Maybe/XS.pm",
-         "version" : "1.000"
+         "version" : "1.001"
       }
    },
    "release_status" : "stable",
@@ -69,6 +70,5 @@
          "web" : "https://github.com/tobyink/p5-perlx-maybe-xs"
       }
    },
-   "version" : "1.000",
-   "x_provides_scripts" : {}
+   "version" : "1.001"
 }

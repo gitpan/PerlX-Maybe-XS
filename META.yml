@@ -7,9 +7,9 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.17
 dynamic_config: 1
-generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.007, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.014, CPAN::Meta::Converter version 2.120921'
 keywords: []
-license: unknown
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -21,12 +21,13 @@ no_index:
     - inc
     - t
     - xt
+optional_features: {}
 provides:
   PerlX::Maybe::XS:
     file: lib/PerlX/Maybe/XS.pm
-    version: 1.000
+    version: 1.001
 recommends:
-  Perl::Maybe: 0
+  PerlX::Maybe: 0
 requires:
   perl: 5.008
 resources:
@@ -35,5 +36,4 @@ resources:
   homepage: https://metacpan.org/release/PerlX-Maybe-XS
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-perlx-maybe-xs
-version: 1.000
-x_provides_scripts: {}
+version: 1.001
